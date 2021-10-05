@@ -14,7 +14,7 @@ function Nominate() {
     category: category
   }
 
-  const url = 'http://127.0.0.1:8000/api/add';
+  const url = 'http://nom-app.herokuapp.com/api/add';
 
   axios.post(url,data)
   
@@ -30,7 +30,7 @@ function Nominate() {
 
 // get categories
 function getCategories() {
-  fetch('http://localhost:8000/api/categories') 
+  fetch('http://nom-app.herokuapp.com/api/categories') 
   .then(function(response) {
     return response.json()
   })
@@ -65,7 +65,7 @@ function acceptNomination() {
       instagram: insta
     }
 
-    const url = "http://localhost:8000/api/nominee/create"
+    const url = "https://nom-app.herokuapp.com/api/nominee/create"
 
     axios.post(url,data)
   
