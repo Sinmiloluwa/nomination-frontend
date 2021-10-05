@@ -32,8 +32,10 @@ function Nominate() {
   console.error(error.response.data);
   })
 
-  location.reload();
-  return false;
+  // location.reload();
+  // return false;
+
+  
 
 }
 
