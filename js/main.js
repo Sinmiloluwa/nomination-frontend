@@ -14,7 +14,7 @@ function Nominate() {
     category: category
   }
 
-  const url = 'http://nom-app.herokuapp.com/api/add';
+  const url = 'https://nom-app.herokuapp.com/api/add';
 
   axios.post(url,data)
   
@@ -30,7 +30,7 @@ function Nominate() {
 
 // get categories
 function getCategories() {
-  fetch('http://nom-app.herokuapp.com/api/categories') 
+  fetch('https://nom-app.herokuapp.com/api/categories') 
   .then(function(response) {
     return response.json()
   })
