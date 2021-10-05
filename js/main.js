@@ -25,7 +25,8 @@ function Nominate() {
   console.error(error.response.data);
   })
 
-  location.reload();  
+  location.reload();
+  return false;  
 }
 
 // get categories
