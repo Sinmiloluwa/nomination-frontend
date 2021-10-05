@@ -5,6 +5,7 @@ function Nominate() {
   const linkedIn = document.getElementById('linkedin').value;
   const twitter = document.getElementById('twitter').value;
   const category = document.getElementById('option').value;
+  const message = document.getElementById('message');
 
   let data = {
     fullname: fullName,
@@ -13,6 +14,7 @@ function Nominate() {
     twitter: twitter,
     category: category
   }
+  console.log(data);
 
   const url = 'https://nom-app.herokuapp.com/api/add';
 
@@ -20,13 +22,19 @@ function Nominate() {
   
   .then(function (response) {
     console.log(response);
+    message.innerHTML = '<div class="alert alert-warning alert-dismissible fade show" role="alert"  id="message">'
+            '<button type="button" class="close" data-dismiss="alert" aria-label="Close">'
+              '<span aria-hidden="true">&times;</span>'
+            '</button>'
+          '</div>'
   })
   .catch(function(error) {
   console.error(error.response.data);
   })
 
   location.reload();
-  return false;  
+  return false;
+
 }
 
 // get categories
