@@ -1,0 +1,126 @@
+<html>
+<head>
+	<title>Nomination</title>
+	 <!-- Required meta tags -->
+	 <meta charset="utf-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Font Awesome -->
+	<link
+	  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+	  rel="stylesheet"
+	/>
+
+	<!-- Google Fonts -->
+	<link
+	  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+	  rel="stylesheet"
+	/>
+	<link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
+	<!-- MDB -->
+	<link
+	  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css"
+	  rel="stylesheet"
+	/>
+	<link rel="stylesheet" href="css/main.css">
+
+
+	<!-- MDB -->
+	<script
+	  type="text/javascript"
+	  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"
+	></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+	<script
+	  type="text/javascript"
+	  src="js/main.js"
+	></script>
+</head>
+<body onload="getCategories()">
+	<header>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container-fluid">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarExample01"
+        aria-controls="navbarExample01"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarExample01">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" aria-current="page" href="#">LOGO</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar -->
+
+  <!-- Jumbotron -->
+  <div class="p-5 text-center bg-light m-auto">
+    <h1 class="mb-3">NOMINATION HEADING</h1>
+    <h4 class="mb-3">SOME TEXT</h4>
+    <!-- <a class="btn btn-primary" href="" role="button">NOMINATE</a> -->
+  </div>
+  <!-- Jumbotron -->
+</header>
+
+	<div class="container align-items-center m-auto">
+		<div class="card mb-3 form-card" style="max-width: 700px;">
+			<div class="row g-0">
+			  <div class="col-md-4">
+				<img
+				  src="img/nomination.jpg"
+				  alt="..."
+				  class="img-fluid"
+				/>
+			  </div>
+			  <div class="col-md-8">
+				<div class="card-body">
+				  <h5 class="card-title">Fill the form to nominate</h5>
+				  <p class="card-text">
+					  <form method="POST" action="http://localhost:8000/api/add" id="nominate">
+						<div class="form-group">
+							<label for="">Select Category</label>
+							<select style="width: 100%;" id="option" name="category">
+
+							</select>
+						  </div>
+						  <div class="row inputs">
+							<div class="col-md-6 mt-3">
+								<input type="text" class="form-control" name="fullname" placeholder="Fullname" id="fullname">
+							</div>
+							<div class="col-md-6 mt-3">
+								<input type="text" class="form-control" name="email" placeholder="Email" id="email">
+							</div>
+						  </div>
+						  <div class="row inputs">
+							<div class="col-md-6 mt-3">
+								<input type="text" class="form-control" name="linkedin" placeholder="Linkedin Profile" id="linkedin">
+							</div>
+							<div class="col-md-6 mt-3">
+								<input type="text" class="form-control" name="twitter" placeholder="Twitter Profile" id="twitter">
+							</div>
+						  </div>
+						  <div class="submit mt-5">
+							<button type="submit" class="btn btn-secondary" onchange="Nominate()">Nominate</button>
+						  </div>
+					  </form>
+				  </p>
+				</div>
+			  </div>
+			</div>
+		  </div>
+	</div>
+
+
+</body>
+</html>

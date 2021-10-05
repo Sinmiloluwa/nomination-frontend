@@ -1,0 +1,52 @@
+body{
+	font-family: 'Roboto';
+}
+
+.inputs input {
+	outline: 0;
+	border-width: 0 0 2px;
+	border-color: gray
+}
+
+.inputs input:focus {
+	outline: 0;
+	border-color: gray;
+}
+
+input:focus, input.form-control:focus {
+
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+select {
+	padding: 6px 20px 6px 6px !important;
+	width: auto;
+	border-radius: 5px;
+	margin: auto;
+	width: 50%;
+}
+
+.form-card {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+	font-family: 'Mulish', sans-serif;
+}
+
+.card img{
+	height: 350px;
+}
+
+.visual img{
+	height: 370px;
+}
+
+.card-title {
+	font-size: 30px;
+}
+
