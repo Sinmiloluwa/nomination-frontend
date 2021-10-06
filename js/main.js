@@ -5,7 +5,7 @@ function Nominate() {
   const linkedIn = document.getElementById('linkedin').value;
   const twitter = document.getElementById('twitter').value;
   const category = document.getElementById('option').value;
-  const message = document.getElementById('message');
+  const message = document.getElementById('alert');
 
   let data = {
     fullname: fullName,
@@ -22,20 +22,27 @@ function Nominate() {
   
   .then(function (response) {
     console.log(response);
-    message.innerHTML = '<div class="alert alert-warning alert-dismissible fade show" role="alert"  id="message">'
-            '<button type="button" class="close" data-dismiss="alert" aria-label="Close">'
-              '<span aria-hidden="true">&times;</span>'
-            '</button>'
-          '</div>'
+    if (response.status == 201 || response.status == 200) {
+    message.innerHTML = `<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Nomination Successful</strong> You can go ahead to nominate someone else.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>`;
+window.setTimeout(function(){location.reload()},3000);
+  return false;
+}
+
+
   })
   .catch(function(error) {
   console.error(error.response.data);
   })
 
-  // location.reload();
-  // return false;
 
+    
   
+
 
 }
 
