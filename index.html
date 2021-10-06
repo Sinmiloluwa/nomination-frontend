@@ -88,7 +88,7 @@
 					<div id="alert"></div>
 				  <h5 class="card-title">Fill the form to nominate</h5>
 				  <p class="card-text">
-					  <form method="POST" action="" id="nominate">
+					  <form method="POST" action="https://nom-app.herokuapp.com/api/add" id="nominate">
 						<div class="form-group">
 							<label for="">Select Category</label>
 							<select style="width: 100%;" id="option" name="category">
@@ -112,7 +112,7 @@
 							</div>
 						  </div>
 						  <div class="submit mt-5">
-							<button type="submit" class="btn btn-secondary" onclick="Nominate()">Nominate</button>
+							<button type="button" class="btn btn-secondary" id="submit" onclick="Nominate()">Nominate</button>
 						  </div>
 					  </form>
 				  </p>

@@ -28,23 +28,21 @@ function Nominate() {
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
-</div>`;
+  </div>`;
 window.setTimeout(function(){location.reload()},3000);
   return false;
 }
 
-
-  })
-  .catch(function(error) {
-  console.error(error.response.data);
-  })
-
-
-    
-  
-
-
+})
 }
+
+
+  // })
+  // .catch(function(error) {
+  // console.error(error.response.data);
+  // })
+
+
 
 // get categories
 function getCategories() {
